@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Parcial Labo 3 Galeano Florencia</title>
+</head>
+<body>
+    <!--Filtro-->
+    <div>
+        <label>Filtrar por:</label>
+        <select id="filtro-tabla-vehiculos">
+            <option value="todos">Todos</option>
+            <option value="aereos">Aereos</option>
+            <option value="terrestres">Terrestres</option>
+        </select>    
+    </div>
+
+    <div id="checkbox-div"></div>
+
+    <div>
+        <label>Promedio Velocidad Maxima:</label>
+        <input id="velocidadPromedioTxt" type="text" readonly>
+        <input id="btnCalcularVelocidadPromedio" type="button" value="Calcular">
+    </div>
+
+    <div id="tabla-vehiculos"></div>
+    <button id="btnAgregar"  type="submit">Agregar</button>
+
+    <!--FORM ABM-->
+    <form id="form-alta" hidden>
+        <div>
+            <p class="campo-form-alta">Id:</p>
+            <input class="inputTxt"  placeholder="Id" type="text" name="txtId" id="txtId" readonly />
+        </div>
+        <div>
+            <p class="campo-form-alta" required>Modelo:</p>
+            <input class="inputTxt"  placeholder="Modelo" type="text" name="txtModelo" id="txtModelo" required />
+        </div>
+        <div>
+            <p class="campo-form-alta" required>Año Fabricacion:</p>
+            <input class="inputTxt"  placeholder="Año fabricacion" type="text" name="txtAnoFabriacion" id="txtAnoFabriacion" required />
+        </div>
+        <div>
+            <p class="campo-form-alta" required>Velocidad Maxima:</p>
+            <input class="inputTxt"  placeholder="Velocidad Maxima" type="number" name="txtVelMax" id="txtVelMax" required min="15"  />
+        </div>
+        <div>
+            <p class="campo-form-alta">Tipo:</p>
+            <select id="tipo-vehiculo">
+                <option value="aereo">Aereo</option>
+                <option value="terrestre">Terrestre</option>
+            </select>
+        </div>
+        <!--aereo-->
+        <div id="campoAltMax">
+            <p class="campo-form-alta">Altura maxima:</p>
+            <input class="inputTxt"  placeholder="Altura maxima" type="number" name="txtAltMax" id="txtAltMax" />
+        </div>
+        <div id="campoAutonomia">
+            <p class="campo-form-alta">Autonomia:</p>
+            <input class="inputTxt"  placeholder="Autonomia" type="number" name="txtAutonomia" id="txtAutonomia" />
+        </div>
+        <!--terrestre-->
+        <div id="campoCantPue" hidden>
+            <p class="campo-form-alta">Cantidad de puertas:</p>
+            <input class="inputTxt"  placeholder="Cantidad de puertas" type="number" name="txtCantPue" id="txtCantPue" />
+        </div>
+        <div id="campoCantRue" hidden>
+            <p class="campo-form-alta">Cantidad de ruedas:</p>
+            <input class="inputTxt"  placeholder="Cantidad de ruedas" type="number" name="txtCantRue" id="txtCantRue" />
+        </div>
+
+
+        <div>
+            <input type="button" id="btnAlta"  type="submit" value="Agregar">
+            <input type="button" id="btnModificar"  type="submit" value="Modificar">
+            <input type="button" id="btnEliminar"  type="submit" value="Eliminar">
+            <input type="button" id="btnCancelar"  type="submit" value="Cancelar">
+
+        </div>
+    </form>
+
+
+
+
+    <script src="js/vehiculo.js"></script>
+    <script src="js/aereo.js"></script>
+    <script src="js/terrestre.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/formulario.js" defer></script>
+
+</body>
+</html>

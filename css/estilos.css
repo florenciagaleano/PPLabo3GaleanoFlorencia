@@ -1,0 +1,33 @@
+button,
+#btnCalcularVelocidadPromedio{
+    cursor: pointer;
+}
+
+#btnCancelar,
+#btnEliminar,
+#btnModificar,
+#btnAlta,
+#btnAgregar,
+#btnCalcularVelocidadPromedio{
+    margin: 10px;
+}
+
+th,td {
+  border: 1px solid black;
+  padding: 5px 10px;
+  text-transform: capitalize;
+}
+
+#form-alta{
+    color: #333333;
+    background-color: rgba(233, 228, 228, 0.588);
+    margin: 10px;
+    padding: 10px;
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.thVehiculo{
+    background-color: pink;
+}
